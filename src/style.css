@@ -418,7 +418,7 @@ select {
 }
 
 /* Mobile Layout */
-@media (max-width: 23.4375em) {
+@media (max-width: 26.5625em) {
   .mainBox {
     grid-auto-flow: row;
     background: none;
