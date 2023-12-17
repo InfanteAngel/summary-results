@@ -1,0 +1,446 @@
+:root {
+  /* Primary Colors */
+
+  --primary-light-red-clr: hsl(0, 100%, 67%);
+  --primary-orangey-yellow: hsl(39, 100%, 56%);
+  --primary-green-teal: hsl(166, 100%, 37%);
+  --primary-cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+
+  --gr-light-slt-blue: #7857ff;
+  --gr-light-ryl-blue: #2e2be9;
+  --gr-violet-blue: hsl(256, 72%, 46%);
+  --gr-persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+
+  --ntl-white: hsl(0, 0%, 100%);
+  --ntl-pale-blue: hsl(221, 100%, 96%);
+  --ntl-light-lavender: hsl(241, 100%, 89%);
+  --ntl-dark-gry-blue: hsl(224, 30%, 27%);
+
+  /* Font Size */
+
+  --primary-font-size: 1.125rem;
+
+  /* Font Family */
+
+  --primary-font-family: "Hanken Grotesk", sans-serif;
+
+  /* Font Weights */
+
+  --fw-medium-500: 500;
+  --fw-bold-700: 700;
+  --fw-extraBold-800: 800;
+}
+
+/* Utility Classes */
+
+.prm-light-rd-clr {
+  color: var(--primary-light-red-clr);
+}
+
+.prm-orng-yll-clr {
+  color: var(--primary-orangey-yellow);
+}
+
+.prm-grn-teal-clr {
+  color: var(--primary-green-teal);
+}
+
+.prm-cblt-blu-clr {
+  color: var(--primary-cobalt-blue);
+}
+
+.gr-lt-slt-blu-clr {
+  color: var(--gr-light-slt-blue);
+}
+
+.gr-light-ryl-blu-clr {
+  color: var(--gr-light-ryl-blue);
+}
+
+.gr-vilt-blu-clr {
+  color: var(--gr-violet-blue);
+}
+
+.gr-prsn-blu-clr {
+  color: var(--gr-persian-blue);
+}
+
+.ntrl-white-clr {
+  color: var(--ntl-white);
+}
+
+.ntrl-pl-blu-clr {
+  color: var(--ntl-pale-blue);
+}
+
+.ntrl-lt-lvndr-clr {
+  color: var(--ntl-light-lavender);
+}
+
+.ntrl-drk-gry-blu {
+  color: var(--ntl-dark-gry-blue);
+}
+
+.primary-ff {
+  font-family: var(--primary-font-family);
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.fw-md-500 {
+  font-weight: var(--fw-medium-500);
+}
+
+.fw-bold-700 {
+  font-weight: var(--fw-bold-700);
+}
+
+.fw-xBold-800 {
+  font-weight: var(--fw-extraBold-800);
+}
+
+.resultBackgroundColor {
+  background: rgb(120, 87, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+}
+
+.container {
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.main-container {
+  -max-width: 1110px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.result-container,
+.summary-container {
+  --max-width: 1110px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.mainBox {
+  margin-inline: auto;
+  width: 30rem;
+  height: 21.5rem;
+  margin-top: 8rem;
+  background: var(--ntl-white);
+  border-radius: 15px;
+  box-shadow: 2px 2px 30px -15px var(--ntl-light-lavender);
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.resultBox,
+.summaryBox {
+  width: 50%;
+  border-radius: 15px;
+  text-align: center;
+  height: 100%;
+}
+
+.summaryBox {
+  margin-left: -11rem;
+  width: 14rem;
+}
+
+.header-text {
+  color: var(--ntl-light-lavender);
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+
+.bigNumber {
+  padding-top: 1.1rem;
+  font-size: 3rem;
+  color: var(--ntl-white);
+}
+
+.resultNumContainer {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 100px;
+  margin-inline: auto;
+  margin-top: -2rem;
+
+  background: hsla(256, 72%, 46%, 1);
+  background: linear-gradient(
+    180deg,
+    hsla(256, 72%, 46%, 1) 0%,
+    hsla(241, 72%, 46%, 0)
+  );
+}
+
+.subNumber {
+  color: var(--ntl-light-lavender);
+  margin-top: -0.5rem;
+  font-size: 0.8rem;
+}
+
+.rating {
+  color: var(--ntl-white);
+  font-size: 1.3rem;
+}
+
+.para {
+  color: var(--ntl-light-lavender);
+  font-size: 0.8rem;
+}
+
+.subBox {
+  --max-width: 1110px;
+  --padding: 2rem;
+
+  width: min(var(--max-width), 100% - (var(--padding) * 2));
+  margin-inline: auto;
+}
+
+.summaryWrap {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.summaryRows {
+  display: grid;
+  grid-auto-flow: row;
+}
+
+.singleRow,
+.name {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.3rem;
+}
+
+.name svg {
+  margin-top: 1.1rem;
+}
+
+.name,
+.data {
+  margin-top: -1rem;
+  padding: 0.5rem;
+}
+
+.data {
+  display: flex;
+  font-size: 0.9rem;
+  margin-top: -0.8rem;
+}
+
+.name :nth-child(2) {
+  min-width: 5rem;
+  margin-left: -1rem;
+  text-align: left;
+}
+
+.total {
+  filter: opacity(40%);
+}
+
+.data :nth-child(1) {
+  margin-right: 0.5rem;
+}
+
+.sumHead {
+  float: left;
+  width: 2rem;
+}
+
+.reactionSection,
+.memorySection,
+.verbalSection,
+.summarySection {
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  transition: ease-in-out 300ms;
+  box-shadow: 0px 0px 10px -5px var(--ntl-light-lavender);
+}
+
+.reactionSection:hover,
+.memorySection:hover,
+.verbalSection:hover,
+.summarySection:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+  box-shadow: 0px 10px 10px -5px var(--ntl-light-lavender);
+}
+
+.reactionSection {
+  margin-top: 1rem;
+  background: hsla(0, 100%, 67%, 0.1);
+}
+
+.memorySection {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+
+.verbalSection {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+
+.summarySection {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+
+.reacText {
+  color: var(--primary-light-red-clr);
+}
+
+.memoText {
+  color: var(--primary-orangey-yellow);
+}
+
+.verbText {
+  color: var(--primary-green-teal);
+}
+
+.visText {
+  color: var(--primary-cobalt-blue);
+}
+
+.myButton {
+  margin-top: 0.7rem;
+  padding: 0.7rem;
+  background-color: var(--ntl-dark-gry-blue);
+  border: none;
+  border-radius: 100px;
+  color: var(--ntl-white);
+}
+
+.myButton:hover {
+  cursor: pointer;
+  background: rgb(120, 87, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(120, 87, 255, 1) 0%,
+    rgba(46, 43, 233, 1) 100%
+  );
+}
+
+.myButton:active {
+  background: var(--gr-light-ryl-blue);
+}
+
+/* Mobile Layout */
+@media (max-width: 23.4375em) {
+  .mainBox {
+    grid-auto-flow: row;
+    background: none;
+    box-shadow: 0px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    margin-top: 0rem;
+  }
+
+  .resultBox {
+    width: 106%;
+    margin-left: -0.5rem;
+    margin-top: -1.5rem;
+    height: 21rem;
+  }
+
+  .summary-container {
+    margin-left: 0rem;
+    margin-inline: auto;
+  }
+
+  .myButton {
+    margin-bottom: 1rem;
+  }
+}
