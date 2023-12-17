@@ -36,7 +36,6 @@ const reactionRow = {
   ),
   title: <p className="reacText">Reaction</p>,
   num: "80",
-  color: "className = prm-light-rd-clr",
 };
 
 const memoryRow = {
@@ -73,7 +72,6 @@ const memoryRow = {
   ),
   title: <p className="memoText">Memory</p>,
   num: "92",
-  color: "className = prm-orng-yll-clr",
 };
 
 const verbalRow = {
@@ -96,7 +94,6 @@ const verbalRow = {
   ),
   title: <p className="verbText">Verbal</p>,
   num: "61",
-  color: "className = .prm-grn-teal-clr",
 };
 
 const visualRow = {
@@ -126,7 +123,6 @@ const visualRow = {
   ),
   title: <p className="visText">Visual</p>,
   num: "72",
-  color: "className = .prm-cblt-blu-clr",
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -183,7 +179,6 @@ const SummaryContainerBox = (props) => {
               title={reactionRow.title}
               total={summary.total}
               num={reactionRow.num}
-              color={reactionRow.color}
             />
           </section>
 
@@ -193,7 +188,6 @@ const SummaryContainerBox = (props) => {
               title={memoryRow.title}
               total={summary.total}
               num={memoryRow.num}
-              color={memoryRow.color}
             />
           </section>
 
@@ -213,7 +207,6 @@ const SummaryContainerBox = (props) => {
               title={visualRow.title}
               total={summary.total}
               num={visualRow.num}
-              color={visualRow.color}
             />
           </section>
 
@@ -225,7 +218,7 @@ const SummaryContainerBox = (props) => {
 };
 
 const SummaryRows = (props) => {
-  const { total, img, title, num, color } = props;
+  const { total, img, title, num } = props;
   return (
     <div className="myRow | ">
       <div className="singleRow">
